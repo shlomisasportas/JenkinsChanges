@@ -6,6 +6,7 @@ node('slave01') {
         
         stage('System tests') {
         sh 'echo "Stage #2 - Unit Tests"' }
+        sh 'exit 1'
         
         stage('Deploy to prod') {
         sh 'echo "Stage #3 - Deploy to prod"' }
