@@ -1,7 +1,6 @@
 node('slave01') {
     currentBuild.result = "SUCCESS"
     node('slave01'){
-        stages {
             stage('Unit testing') {
             sh 'echo "Unit testing"'
             }
@@ -13,4 +12,3 @@ node('slave01') {
             }
         }
     }
-}
