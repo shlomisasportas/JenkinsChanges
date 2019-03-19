@@ -11,4 +11,5 @@ node('slave01') {
          sh 'echo "Stage #3 - Deploy to prod"'
       }
    }
+}
   
