@@ -1,6 +1,14 @@
 node('slave01') {
    currentBuild.result = "SUCCESS"
-   stage('Printing hello world') {
-      sh 'echo "Hello World"'
+   stages {
+      stage('Unit testing') {
+         sh 'echo "Unit testing"'
+      }
+      stage('System tests') {
+         sh 'echo "Stage #2 - Unit Tests"'
+      }
+      stage('Deploy to prod') {
+         sh 'echo "Stage #3 - Deploy to prod"'
+      }
    }
-}
+  
